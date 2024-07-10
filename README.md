@@ -3,6 +3,7 @@ Your personal code stopwatch to track development time from session to session o
 
 ## Todo
 - [ ] Complete UI With Mock Data
+- [ ] Make logo hgiher quality
 - [ ] Add Auth (clerk)
 - [ ] Add github support
 - [ ] Data visualization and project completion assumtion?
