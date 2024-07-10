@@ -8,9 +8,7 @@ export default function Timer() {
   let minutesPassed = 0;
   let hoursPassed = 0;
   let miliPassed = 0;
-  let nanoPassed = 0;
 
-  const [startTime, setStartTime] = useState(0);
   const [now, setNow] = useState(0);
   const [active, setActive] = useState(false);
 
@@ -27,15 +25,6 @@ export default function Timer() {
       }
     }
   }, [active, now]);
-
-
-  function handleStart() {
-    setActive(true);
-  }
-
-  function handleStop() {
-    setActive(false)
-  }
 
   function handleToggle() {
     setActive(!active);
