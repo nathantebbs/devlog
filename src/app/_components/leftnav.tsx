@@ -9,7 +9,7 @@ export default function LeftNav() {
         alt="dev log logo"
       />
       <div className="grid grid-rows-3 p-5 gap-4 min-h-96 h-full w-full">
-        <div className="p-5 border-2 border-border h-full"></div>
+        <div className="p-5 border-2 border-border h-full"> This is a test</div>
         <div className="p-5 border-2 border-border h-full"></div>
         <div className="p-5 border-2 border-border h-full"></div>
       </div>
