@@ -41,23 +41,27 @@ export default function Timer() {
 
 
   return (
-    <div className="items-center text-4xl md:text-5xl justify-items-center grid grod-rows-2 gap-4 border-2 border-border rounded-3xl p-4 bg-background">
+    <div className="items-center text-2xl justify-items-center grid grod-rows-2 gap-4 border-2 border-border max-w-72 min-w-72 p-4 pe-4 rounded-3xl bg-background">
       <div className="font-bold text-center items-end justify-items-center w-full grid grid-cols-2 text-secondaryText">
         <div className="justify-self-end">
           {hoursPassed.toFixed(0)}:{minutesPassed.toFixed(0)}
         </div>
         <div className="justify-self-start">
-          <span className="md:text-4xl text-2xl">{secondsPassed.toFixed(0)}.{miliPassed}</span>
+          <span className="text-2xl">{secondsPassed.toFixed(0)}.{miliPassed}</span>
         </div>
       </div>
-      <div className="grid grid-cols-2 font-semibold text-4xl gap-10 text-center justify-between">
-        <button className="border-border border-2 bg-background rounded-xl p-4 hover:bg-highlight active:bg-[#1c1c1c] transition-colors ease-in-out duration-200"
+      <div className="grid grid-cols-2 font-semibold gap-10 text-center justify-between">
+        <button className="border-border border-2 bg-background rounded-xl p-4 hover:bg-hover active:bg-highlight transition-colors ease-in-out duration-200"
           onClick={handleToggle}>
-          {active ? "Stop" : "Start"}
+          <div className="object-fit">
+            {active ? "Stop" : "Start"}
+          </div>
         </button>
-        <button className="border-border border-2 bg-background rounded-xl p-4 hover:bg-highlight transition-colors ease-in-out duration-300"
+        <button className="border-border border-2 bg-background rounded-xl p-4 hover:bg-hover active:bg-highlight transition-colors ease-in-out duration-300"
           onClick={handleReset}>
-          Reset
+          <div className="object-fit">
+            Reset
+          </div>
         </button>
       </div>
     </div>

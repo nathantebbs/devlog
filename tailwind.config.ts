@@ -16,6 +16,7 @@ export default {
         accent: '#FF5733',
         link: '#4A90E2',
         border: '#333333',
+        hover: '#5BA7D1',
       },
     },
   },
