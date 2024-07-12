@@ -1,8 +1,9 @@
 import Image from "next/image";
 export default function LeftNav() {
 	return (
-		<div className="flex w-full h-full flex-col p-5 overflow-hidden items-center md:self-start">
+		<div className="flex min-h-screen w-full h-full flex-col p-5 overflow-hidden items-center md:self-start">
 			<Image
+				priority={true}
 				src="https://utfs.io/f/8dab068b-fd6f-45a7-96c6-4dac9e99bb64-75ryzc.png"
 				width={256}
 				height={128}

@@ -2,7 +2,6 @@ import "~/styles/globals.css";
 
 import { type Metadata } from "next";
 import * as fonts from '~/ui/fonts'
-import { LeftNav, RightNav } from "~/app/_components";
 
 export const metadata: Metadata = {
 	title: "DevLog",
@@ -16,12 +15,10 @@ export default function RootLayout({
 
 	return (
 		<html lang="en" className={`${fonts.open_sans.className} antialiased overflow-scroll md:overflow-hidden`}>
-			<body className="md:grid md:grid-cols-3 bg-background text-primaryText divide-y md:divide-x divide-border flex flex-col md:overflow-hidden min-w-screen">
-				<LeftNav />
+			<body className="bg-background text-primaryText">
 				<div className="flex">
 					{children}
 				</div>
-				<RightNav />
 			</body>
 		</html>
 	);
