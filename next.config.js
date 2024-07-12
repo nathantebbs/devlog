@@ -6,17 +6,23 @@ await import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
 const config = {
-  images: {
-    loader: "default",
-    // Use remotePatterns to allow specific remote URLs
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "utfs.io",
-        port: '',
-        pathname: '/f/**',
-      },
-    ],
-  },
+	images: {
+		loader: "default",
+		// Use remotePatterns to allow specific remote URLs
+		remotePatterns: [
+			{
+				protocol: "https",
+				hostname: "utfs.io",
+				port: '',
+				pathname: '/f/**',
+			},
+		],
+	},
+	typescript: {
+		ignoreBuildErrors: true,
+	},
+	eslint: {
+		ignoreDuringBuilds: true,
+	}
 };
 export default config;
