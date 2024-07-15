@@ -13,7 +13,7 @@ export default function Landing() {
 
 	return (
 		<div className="text-6xl font-bold font-sans h-screen w-screen content-center justify-center flex">
-			<div className="grid grid-rows-3 gap-1 self-center w-1/3 justify-items-center items-center border-2 border-border p-5 pb-auto">
+			<div className="grid grid-rows-3 gap-1 self-center w-72 md:w-1/3 justify-items-center items-center border-2 border-border p-5 pb-auto">
 				<div>
 					<Image
 						src="https://utfs.io/f/8dab068b-fd6f-45a7-96c6-4dac9e99bb64-75ryzc.png"
