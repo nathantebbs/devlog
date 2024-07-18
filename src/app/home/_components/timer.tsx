@@ -55,13 +55,13 @@ export default function Timer() {
 				</div>
 			</div>
 			<div className="grid grid-cols-2 font-semibold gap-10 text-center justify-between">
-				<button className="border-border border-2 bg-background rounded-xl p-4 hover:border-hover active:border-highlight transition-colors ease-in-out duration-200"
+				<button className="border-border border-2 bg-background rounded-xl p-4 hover:border-hover active:border-highlight"
 					onClick={handleToggle}>
 					<div className="object-fit">
 						{active ? "Stop" : "Start"}
 					</div>
 				</button>
-				<button className="border-border border-2 bg-background rounded-xl p-4 hover:border-hover active:border-highlight transition-colors ease-in-out duration-300"
+				<button className="border-border border-2 bg-background rounded-xl p-4 hover:border-hover active:border-highlight"
 					onClick={handleReset}>
 					<div className="object-fit">
 						Reset

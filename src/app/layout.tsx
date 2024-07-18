@@ -2,6 +2,7 @@ import "~/styles/globals.css";
 
 import { type Metadata } from "next";
 import * as fonts from '~/ui/fonts'
+import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
 	title: "DevLog",
@@ -14,12 +15,14 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
 
 	return (
-		<html lang="en" className={`${fonts.open_sans.className} antialiased overflow-scroll md:overflow-hidden`}>
-			<body className="bg-background text-primaryText">
-				<div className="flex">
-					{children}
-				</div>
-			</body>
-		</html>
+		<ClerkProvider >
+			<html lang="en" className={`${fonts.open_sans.className} antialiased overflow-scroll md:overflow-hidden`}>
+				<body className="bg-background text-primaryText">
+					<div className="flex">
+						{children}
+					</div>
+				</body>
+			</html>
+		</ClerkProvider>
 	);
 }

@@ -23,6 +23,14 @@ const config = {
 	},
 	eslint: {
 		ignoreDuringBuilds: true,
-	}
-};
+	},
+	rewrites: async () => {
+		return [
+			{
+				source: '/api/github/access',
+				destination: '/api/github/access.ts',
+			},
+		]
+	},
+}
 export default config;
