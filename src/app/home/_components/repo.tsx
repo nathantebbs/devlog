@@ -11,6 +11,7 @@ interface Repository {
 const RepositoryList = () => {
 	const [repositories, setRepositories] = useState<Repository[]>([]);
 	const [error, setError] = useState<string | null>(null);
+	const [loading, setLoading] = useState(true);
 
 	const { session } = useSession();
 
@@ -34,6 +35,8 @@ const RepositoryList = () => {
 				if (error instanceof Error) {
 					setError(error.message);
 				}
+			} finally {
+				setLoading(false);
 			}
 		};
 		fetchRepositories();
@@ -42,6 +45,11 @@ const RepositoryList = () => {
 	if (error) {
 		return <div>Error: {error}</div>;
 	}
+
+	if (loading) {
+		return <div className="font-semibold text-center">Loading ..</div>
+	}
+
 
 	return (
 		<div>
