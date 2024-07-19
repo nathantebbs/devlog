@@ -45,15 +45,14 @@ const RepositoryList = () => {
 
 	return (
 		<div>
-			<h1>Repositories</h1>
 			<ul>
 				{repositories.map((repo: any) => (
-					<li key={repo.id}>
-						{repo.name} {repo.private ? '(Private)' : '(Public)'}
+					<li key={repo.id} className="border-b grid grid-cols-2 border-border">
+						{repo.name} <span className={`text-right ${repo.private ? 'text-accent' : 'text-link'}`}>{repo.private ? '(Private)' : '(Public)'}</span>
 					</li>
 				))}
 			</ul>
-		</div>
+		</div >
 	);
 }
 

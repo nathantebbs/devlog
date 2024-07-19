@@ -3,6 +3,7 @@ import "~/styles/globals.css";
 import { type Metadata } from "next";
 import * as fonts from '~/ui/fonts'
 import { ClerkProvider } from "@clerk/nextjs";
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
 	title: "DevLog",
